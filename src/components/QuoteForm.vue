@@ -32,8 +32,15 @@ export default {
             if (quotesService.list().length >= 10){
                 return;
             }
+            
+            if ((this.quote.text && this.quote.author) === '') {
+                alert('Your quote should not be empty!')
+                return
+            } 
+         
             quotesService.addQuote(this.quote)
             this.quote = {}
+            
             //console.log(quotesService.list())
         }
     }
