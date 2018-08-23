@@ -33,9 +33,10 @@ export default {
                 return;
             }
             
-            if ((this.quote.text && this.quote.author) === '') {
+            if (!(this.quote.text && this.quote.author)) {
                 alert('Your quote should not be empty!')
                 return
+                
             } 
          
             quotesService.addQuote(this.quote)
