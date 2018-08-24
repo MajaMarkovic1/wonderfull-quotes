@@ -1,7 +1,7 @@
 <template>
     <div>
         <QuoteForm />
-        <QuotesList  />
+        <QuotesList @deleteCard="deleteCard" />
     </div>
 </template>
 
@@ -18,6 +18,11 @@ export default {
         QuoteForm,
         QuotesList
     },
+    methods: {
+        deleteCard(quote){
+            quotesService.delete(quote)
+        }
+    }
 
 
 }
