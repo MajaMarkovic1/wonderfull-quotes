@@ -13,8 +13,7 @@ class QuotesService {
     };
 
     delete(quote){
-        quotesList.splice(quote, 1)
-        console.log(quotesList)
+        quotesList.splice(quotesList.indexOf(quote), 1)
     }
 
 }
