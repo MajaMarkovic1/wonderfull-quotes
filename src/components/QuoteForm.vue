@@ -9,7 +9,7 @@
                 <label for="formGroupExampleInput2"><strong>Author</strong></label>
                 <input v-model="quote.author" name="author" type="text" class="form-control" id="formGroupExampleInput2">
             </div>
-            <button type="submit" class="btn btn-primary">Add quote</button>
+            <button type="submit" class="btn btn-info">Add quote</button>
         </form>
     </div>
 </template>

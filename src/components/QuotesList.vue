@@ -2,17 +2,17 @@
     <div>
         <h4>Quotes added: {{ quotes.length }} of {{ maxQuotes }}</h4>
         <div class="progress">
-            <div class="progress-bar" role="progressbar" 
+            <div class="progress-bar bg-info" role="progressbar" 
             :style="{width: (quotes.length * 100 / maxQuotes) + '%' }" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
         </div>
         <div id="card">
             
                 <div class="card" style="width: 18rem;" v-for="quote in quotes" :key="quote.id">
-                    <button @click="deleteCard(quote)">
-                    <div class="card-body" >
-                        <h5 class="card-title">"{{ quote.text }}"</h5>
-                        <h6 class="float-right" >- {{ quote.author }}</h6>
-                    </div>
+                    <button class="btn btn-outline-info" @click="deleteCard(quote)">
+                        <div class="card-body" >
+                            <h5 class="card-title">"{{ quote.text }}"</h5>
+                            <h6 class="float-right" >- {{ quote.author }}</h6>
+                        </div>
                      </button>
                 </div>
            
